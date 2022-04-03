@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+</style>
+
+    <title>Credit Card Fraud Detection</title>
+
+    <!-- CSS reference -->
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+
+    <!--  Custom CSS -->
+    <link rel="stylesheet"  href="{% static 'home/css/style.css' %}">
+	<!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	
+ 
+
+</head>
+<body>
+										
+ <div class="container col-sm-8" style="background-color: #eee;">  
+   <div class="wrapper">  
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="text-center">
+            <p></p>
+            <a href="http://bulletin.gwu.edu/search/?P=DATS%206401"><h5>Credit Card Fraud Detection</h5></a>
+            <a href="http://bulletin.gwu.edu/search/?P=DATS%206401"><h5>Cloud Computing DATS6450</h5></a>
+            <a href="https://www.gwu.edu/"><img src="{% static 'home/images/gw_logo.png' %}"> </a>
+
+        </div>
+
+        <div class="line"></div>
+
+        <ul class="list-unstyled">
+
+            <li class="text-center">
+                <a href="index.html">Overview</a>
+            </li>
+
+            <li class="text-center">
+                <a href="fema.html">EDA Aanalysis</a>
+            </li>
+
+            <li class="text-center">
+                <a href="price.html">Quicksight</a>
+            </li>
+
+        </ul>
+        <div class="line"></div>
+    </nav>  <!-- Sidebar End  -->
+
+    <!-- Page Content  -->
+    <div id="content">
+
+
+        <h2>Introduction</h2>
+         <p class="text-justify">According to the FBI, credit card fraud is the unauthorized use of a credit or debit card, or similar payment tool
+             (ACH, EFT, recurring charge, etc.), to fraudulently obtain money or property. Credit and debit card numbers can be stolen from unsecured websites
+             or can be obtained in an identity theft scheme. </p>
+		
+         <p class="text-justify">In this project we will be working on Kaggle competition Credit Card Fraud Detection.
+             The goal of the project is to be explore the different techniques to handle credit card data and compare different model performance against this data.</p>
+			<p></p>
+            <p></p>
+
+        <div class="row">
+		    <div class="col-sm-6 ">
+		       <h3>Dataset description</h3>
+
+                    <p class="text-justify">-The datasets we are using is project is contains transactions made by credit cards in September 2013 by european cardholders.</p>
+<p class="text-justify">-The dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions.</p>
+<p class="text-justify">-The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.</p>
+<p class="text-justify">-The dataset contains only numeric input variables which are the result of a PCA transformation.</p>
+<p class="text-justify">-Due to confidentiality most of features has been transformed V1, V2, … V28, except 'Time' and 'Amount'.</p>
+
+                 </p>
+            </div>
+			
+            <div class="col-sm-6 ">
+			    <div class="card shadow mb-1 ">
+                    <div class="card-body text-center">
+                        <div id="piechart" class="ct-chart ct-perfect-fourth">
+						    <p>Most disasters decleard of the past 10 years</p>
+
+    <iframe
+        width="430"
+        height="400"
+        src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/574365713939/dashboards/bc5a06c1-b38a-4511-9d88-578e67f10cb5?directory_alias=gwuccgroup1">
+    </iframe>
+                           <p>For more information and analsysis <a class="btn btn-link" href="fema.html">please click here</a> </p>
+								
+                        </div>
+                    </div>
+                </div>       
+			</div>	
+			
+	    </div>
+
+		 <div class="line"></div>
+
+        <div class="row">
+		   <div class="col-sm-6 ">
+		       <h3>Analysis Housing Pricing</h3>
+                 <p class="text-justify">Part of this project we are going to analyze the house pricing in USA using data from Zillow – one of the major real state databases in US –
+                                         and we will be focusing on the Housing pricing change between based on the disaster  declared. 
+                                        </p>
+				   
+				   <p class="text-justify">Also I am going to study this hypothesis by using a natural disaster data for all disaster declared by the president since 1953 created 
+				   by (Federal Emergency Management Agency – FEMA). I am going to use data for only 10 years from 2007-2017 in this project and join the disaster data 
+				   with data of Housing Price Index created by (Zillow – one of the major real state databases in US) also for the period of 10 years from 2007-2017.</p>
+            </div>
+			
+			<div class="col-sm-6 ">
+			    <div class="card shadow mb-1 ">
+                    <div class="card-body text-center">
+                        <div id="barchart" class="ct-chart ct-perfect-fourth">
+						   
+						    <p>Top typs of disaster happend last years</p>		
+							<script src="{% static 'home/js/barchart.js' %}"></script>
+
+							<p>For more information and analsysis <a class="btn btn-link" href="price.html">please click here</a> </p> 
+                        
+                    </div>
+                </div>       
+			</div>	
+        					
+	    </div>
+
+        <div class="line"></div>
+        <p>   </p>
+     
+
+    
+
+            <footer class="container footer text-muted text-sm-center ">
+                <div class=class="container text-center ">
+                    <nav>
+                        <p class="copyright text-center">
+                            Copyright &copy; -
+                            <script>
+							var d = new Date();
+							document.write(d.getFullYear());
+                            </script>
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+
+    </div>
+
+ </div>
+</div>
+
+
+
+	
+</body>
